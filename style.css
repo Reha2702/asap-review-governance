@@ -1,0 +1,225 @@
+:root {
+  --ink: #1e2926;
+  --muted: #66716d;
+  --line: #dce1de;
+  --paper: #f7f8f6;
+  --white: #ffffff;
+  --green: #1f6251;
+  --green-soft: #e5f0eb;
+  --red: #9d433b;
+  --gold: #a47422;
+}
+
+html, body, [class*="css"] {
+  font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  color: var(--ink);
+  letter-spacing: 0;
+}
+
+.stApp { background: var(--paper); }
+header[data-testid="stHeader"] { display: none; }
+#MainMenu, footer { visibility: hidden; }
+
+.block-container {
+  max-width: 1540px;
+  padding: 0 42px 64px;
+}
+
+.archive-topbar {
+  height: 66px;
+  margin: 0 -42px;
+  padding: 0 42px;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.archive-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.archive-brand-mark {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background: var(--green);
+  color: white;
+  font-family: Georgia, "Songti SC", serif;
+}
+
+.archive-brand small {
+  color: #89928f;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 10px;
+  border-left: 1px solid var(--line);
+}
+
+.dataset-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3b9a70;
+  box-shadow: 0 0 0 4px #e9f4ef;
+}
+
+.archive-intro {
+  margin: 0 -42px 28px;
+  padding: 42px 42px 36px;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-eyebrow {
+  margin: 0 0 9px;
+  color: var(--green);
+  font: 700 11px/1.2 ui-monospace, monospace;
+}
+
+.archive-intro h1 {
+  margin: 0;
+  font: 700 42px/1.2 Georgia, "Songti SC", serif;
+}
+
+.archive-intro p:last-child {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+[data-testid="stSidebar"] {
+  background: #f1f3f0;
+  border-right: 1px solid var(--line);
+}
+
+[data-testid="stSidebar"] > div:first-child { padding-top: 26px; }
+[data-testid="stSidebar"] h2 {
+  font: 700 18px Georgia, "Songti SC", serif;
+  color: var(--ink);
+}
+
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] .stMarkdown {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+[data-baseweb="select"] > div,
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea {
+  border-radius: 0 !important;
+  border-color: #aeb8b4 !important;
+  background: var(--white) !important;
+}
+
+[data-testid="stMetric"] {
+  min-height: 106px;
+  padding: 18px 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--green);
+}
+
+[data-testid="stMetricLabel"] {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+[data-testid="stMetricValue"] {
+  color: var(--ink);
+  font: 700 28px Georgia, "Songti SC", serif;
+}
+
+.stTabs [data-baseweb="tab-list"] {
+  gap: 30px;
+  margin-top: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.stTabs [data-baseweb="tab"] {
+  height: 48px;
+  padding: 0;
+  border-radius: 0;
+  color: var(--muted);
+  background: transparent;
+}
+
+.stTabs [aria-selected="true"] {
+  color: var(--green) !important;
+  font-weight: 700;
+}
+
+.stTabs [data-baseweb="tab-highlight"] { background: var(--green); }
+.stTabs [data-baseweb="tab-border"] { display: none; }
+
+[data-testid="stPlotlyChart"],
+[data-testid="stDataFrame"] {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 8px;
+}
+
+h2, h3 {
+  font-family: Georgia, "Songti SC", serif !important;
+  color: var(--ink) !important;
+}
+
+[data-testid="stAlert"] {
+  border-radius: 0;
+  border: 1px solid #d9bf89;
+  border-left: 3px solid var(--gold);
+  background: #faf8f1;
+}
+
+.stButton > button {
+  border-radius: 0;
+  border: 1px solid var(--green);
+  color: var(--green);
+  background: var(--white);
+}
+
+.stButton > button[kind="primary"] {
+  color: white;
+  background: var(--green);
+}
+
+hr { border-color: var(--line) !important; }
+
+.section-index {
+  margin: 34px 0 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.section-index span {
+  color: #a3aca8;
+  font: 11px ui-monospace, monospace;
+}
+
+.section-index strong {
+  font: 700 20px Georgia, "Songti SC", serif;
+}
+
+@media (max-width: 820px) {
+  .block-container { padding: 0 18px 44px; }
+  .archive-topbar { height: 58px; margin: 0 -18px; padding: 0 18px; }
+  .archive-brand small, .dataset-status { display: none; }
+  .archive-intro { margin: 0 -18px 22px; padding: 28px 18px 24px; }
+  .archive-intro h1 { font-size: 30px; }
+  .stTabs [data-baseweb="tab-list"] { gap: 18px; overflow-x: auto; }
+}
